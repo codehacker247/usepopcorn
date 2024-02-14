@@ -13,7 +13,6 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [selectedId, setSelectedId] = useState(null);
   const { movies, isLoading, error } = useMovies(query);
-
   const [watched, setWatched] = useLocalStorageState([], "watched");
 
   function handleSelectMovie(id) {
@@ -203,7 +202,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
   const [movie, setMovie] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [userRating, setUserRating] = useState("");
-
   const countRef = useRef(0);
 
   useEffect(
